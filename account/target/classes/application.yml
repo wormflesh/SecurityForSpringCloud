@@ -1,0 +1,26 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: account
+
+#  cloud:
+#    nacos:
+#      server-addr: localhost:8848
+
+    # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # -------------------修改------------------------------------
+    url: "jdbc:mysql://127.0.0.1:3306/security_test?useUnicode=true&useSSL=false&characterEncoding=utf8"
+    username: root
+    # ------------------修改--------------------------------------
+    password: 135790
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+
+logging:
+  level:
+    org.security.account.mapper: debug
