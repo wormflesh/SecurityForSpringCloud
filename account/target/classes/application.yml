@@ -5,9 +5,9 @@ spring:
   application:
     name: account
 
-#  cloud:
-#    nacos:
-#      server-addr: localhost:8848
+  cloud:
+    nacos:
+      server-addr: localhost:8848
 
     # 数据源配置
   datasource:
@@ -24,3 +24,10 @@ mybatis-plus:
 logging:
   level:
     org.security.account.mapper: debug
+
+#暴露监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

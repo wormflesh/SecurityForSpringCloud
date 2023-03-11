@@ -1,7 +1,10 @@
 package org.security.account.service;
 
+import org.security.account.entity.PermissionEntity;
 import org.security.account.pojo.Permission;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IPermissionService extends IService<Permission> {
 
+    List<PermissionEntity> getPermissionsByUserId(Integer id);
 }
