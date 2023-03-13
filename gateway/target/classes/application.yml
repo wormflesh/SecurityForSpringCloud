@@ -9,12 +9,12 @@ spring:
       server-addr: localhost:8848
     gateway:
       routes:
-#        - id: school-server
-#          uri: lb://school-server
-#          predicates:
-#            - Path=/api/school/**
-#          filters:
-#            - RewritePath=/api/school/(?<segment>.*),/$\{segment}
+        - id: article
+          uri: lb://article
+          predicates:
+            - Path=/api/article/**
+          filters:
+            - RewritePath=/api/article/(?<segment>.*),/$\{segment}
         - id: account
           uri: lb://account
           predicates:

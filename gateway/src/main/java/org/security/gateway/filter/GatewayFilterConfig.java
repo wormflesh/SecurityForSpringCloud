@@ -44,8 +44,9 @@ public class GatewayFilterConfig implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String requestUrl = exchange.getRequest().getPath().value();
         AntPathMatcher pathMatcher = new AntPathMatcher();
-        //1 uaa服务所有放行
-        if (pathMatcher.match("/api/uaa/**", requestUrl)) {
+        /*--------------------------------------------------------------------------------------*/
+        //1 account服务所有放行
+        if (pathMatcher.match("/api/account/**", requestUrl)) {
             return chain.filter(exchange);
         }
         //2 检查token是否存在

@@ -13,6 +13,7 @@
     <module>common</module>
     <module>account</module>
       <module>gateway</module>
+      <module>article</module>
   </modules>
 
   <packaging>pom</packaging>

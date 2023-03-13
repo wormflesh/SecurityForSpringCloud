@@ -10,6 +10,7 @@
         <module name="common" />
         <module name="account" />
         <module name="gateway" />
+        <module name="article" />
       </profile>
     </annotationProcessing>
   </component>
